@@ -14994,7 +14994,7 @@ if (data and data.code_ and data.code_ == 400 and data.message_ == "CHAT_ADMIN_R
 send(msg.chat_id_, msg.id_,' 𖢄 ليس لدي صلاحية حظر المستخدمين يرجى تفعيلها !') 
 return false  
 end
-if (data and data.code_ and d ata.code_ == 3) then 
+if (data and data.code_ and data.code_ == 3) then 
 send(msg.chat_id_, msg.id_,' 𖢄 البوت ليس ادمن يرجى ترقيتي !') 
 return false  
 end
@@ -16003,7 +16003,7 @@ local List = {
 • MSG ➤  #msgs  .
 • STA ➤  #stast  .
 • iD ➤ #id  .
-• 𝗖𝗛 - ↝@A_F_fwdka1↜ 💞.
+• ??𝗛 - ↝@A_F_fwdka1↜ 💞.
 ]],
 [[
 𝐘𝐨𝐮𝐫 𝐈𝐃 ☤🇪🇬- #id 
