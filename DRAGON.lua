@@ -14983,35 +14983,6 @@ else
 send(msg.chat_id_, msg.id_,' * 𖢄 تم تعطيل امر اطردني*') 
 end
 end
-if text == 'اطردني' or text == 'طلعني' then
-if not database:get(bot_id..'Cick:Me'..msg.chat_id_) then
-if Can_or_NotCan(msg.sender_user_id_, msg.chat_id_) == true then
-send(msg.chat_id_, msg.id_, '\n 𖢄 عذرا لا استطيع طرد ( ↝'..Rutba(msg.sender_user_id_,msg.chat_id_)..'↜ )')
-return false
-end
-tdcli_function({ID="ChangeChatMemberStatus",chat_id_=msg.chat_id_,user_id_=msg.sender_user_id_,status_={ID="ChatMemberStatusKicked"},},function(arg,data) 
-if (data and data.code_ and data.code_ == 400 and data.message_ == "CHAT_ADMIN_REQUIRED") then 
-send(msg.chat_id_, msg.id_,' 𖢄 ليس لدي صلاحية حظر المستخدمين يرجى تفعيلها !') 
-return false  
-end
-if (data and data.code_ and d ata.code_ == 3) then 
-send(msg.chat_id_, msg.id_,' 𖢄 البوت ليس ادمن يرجى ترقيتي !') 
-return false  
-end
-if data and data.code_ and data.code_ == 400 and data.message_ == "USER_ADMIN_INVALID" then 
-send(msg.chat_id_, msg.id_,' 𖢄 عذرا لا استطيع طرد ادمنية الجروب') 
-return false  
-end
-if data and data.ID and data.ID == 'Ok' then
-send(msg.chat_id_, msg.id_,' 𖢄 تم طردك من الجروب') 
-tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = msg.chat_id_, user_id_ = msg.sender_user_id_, status_ = { ID = "ChatMemberStatusLeft" },},function(arg,ban) end,nil)   
-return false
-end
-end,nil)   
-else
-send(msg.chat_id_, msg.id_,' 𖢄 تم تعطيل امر اطردني') 
-end
-end
 if text and text:match("^صيح (.*)$") then
 local username = text:match("^صيح (.*)$") 
 if not database:get(bot_id..'Seh:User'..msg.chat_id_) then
